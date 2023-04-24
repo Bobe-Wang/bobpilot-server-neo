@@ -15,6 +15,7 @@ realdata
 .DS_Store
 *.log
 .env
+.env.docker
 
 # Build
 dist

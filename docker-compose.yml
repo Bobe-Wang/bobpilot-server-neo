@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  retropilot-postgres:
+    image: postgres:latest
+    container_name: retropilot-postgres
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: retro-pilot
+    volumes:
+      - /var/lib/retropilot/postgres:/var/lib/postgresql/data
+
+  retropilot-redis:
+    image: redis:latest
+    container_name: retropilot-redis
+    volumes:
+      - /var/lib/retropilot/redis:/data
+
+  retropilot-server:
+    build: ./
+    container_name: retropilot-server
+    volumes:
+      - /var/lib/retropilot/realdata:/realdata
+    depends_on:
+      - retropilot-postgres
+      - retropilot-redis
+    ports:
+      - "8080:8080"
