@@ -2,11 +2,10 @@
 
 ![Uptime Robot status](https://img.shields.io/uptimerobot/status/m791143178-df355c13f922c35db89054b0)
 ![Uptime Robot ratio (7 days)](https://img.shields.io/uptimerobot/ratio/7/m791143178-df355c13f922c35db89054b0)
-![CI workflow](https://github.com/RetroPilot/retropilot-server/actions/workflows/ci.yml/badge.svg)
 
 Replacement for comma.ai backend and useradmin dashboard. Bundled with a modified version of comma's cabana to allow viewing & analyzing drives.
 
-If you don't want to host your own instance, check out https://api.retropilot.org/useradmin for a hosted version of the backend, useradmin and cabana.
+If you don't want to host your own instance, check out https://api.bobpilot.org/useradmin for a hosted version of the backend, useradmin and cabana.
 
 ### [Server] Summary
 
@@ -49,10 +48,10 @@ A compiled version of a custom cabana fork (https://github.com/RetroPilot/cabana
 ### [Device] Preparation / Enable Custom Server
 
 On the device or in your fork's code, replace all API endpoints with your own server endpoint. 
-This could be executed directly on the device in the shell to use `https://api.retropilot.org` as backend:
+This could be executed directly on the device in the shell to use `https://api.bobpilot.org` as backend:
 
 ```
-find /data/openpilot -type f -exec sed -i 's/https:\/\/api.commadotai.com/https:\/\/api.retropilot.org/g' {} +
+find /data/openpilot -type f -exec sed -i 's/https:\/\/api.commadotai.com/https:\/\/api.bobpilot.org/g' {} +
 ```
 
 TODO: add git patch instructions
