@@ -1,4 +1,4 @@
-# retropilot-server
+# bobpilot-server
 
 ![Uptime Robot status](https://img.shields.io/uptimerobot/status/m791143178-df355c13f922c35db89054b0)
 ![Uptime Robot ratio (7 days)](https://img.shields.io/uptimerobot/ratio/7/m791143178-df355c13f922c35db89054b0)
@@ -104,6 +104,3 @@ The athena websockets interface is not implemented yet, so the comma app and ath
 ## Deployment
 
 For deployment instructions and configuration, take a look at the `environment` directory.
-
-### Code of Conduct
-https://github.com/RetroPilot/.github/blob/main/profile/CODE_OF_CONDUCT
